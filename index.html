@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260907-05-0068bad","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/9e99ecf74af2a081.telemetry_sdk.js" integrity="sha512-tZ7fmfTx2KpCLjXQnEuL9azQ4A5+7+xumsx6r/WYVD0zCP/8LP8hDeCypMQesmP+WyAew4g7l5Ah23Bjd6yoVg=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نظام إدارة الشركات والمهام</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{--teal:#0f766e;--deep:#134e4a;--mint:#ccfbf1;--ink:#173b3b;--line:#d6eeeb}
+    *{box-sizing:border-box} body{margin:0;font-family:Tajawal,sans-serif;color:var(--ink)}
+    button,input,select,textarea{font:inherit}.app-shell{width:100%;min-height:calc(100 * min(var(--vh,1vh),1vh));background:linear-gradient(135deg,#e6fffb 0%,#f8fffe 46%,#d7f6f0 100%);position:relative}
+    .app-shell:before,.app-shell:after{content:"";position:fixed;width:28rem;height:28rem;border-radius:999px;background:#14b8a61c;pointer-events:none}.app-shell:before{top:-13rem;right:-10rem}.app-shell:after{bottom:-17rem;left:-10rem;background:#0f766e14}
+    .glass-card{background:#fffffff0;border:1px solid #fff;box-shadow:0 18px 45px #0f766e16}.field{width:100%;border:1px solid #cde8e5;border-radius:.8rem;padding:.72rem .9rem;outline:none;background:#fcffff}.field:focus{border-color:#14b8a6;box-shadow:0 0 0 4px #14b8a622}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;border-radius:.75rem;padding:.65rem .9rem;font-weight:700;transition:.2s;border:1px solid transparent;cursor:pointer}.btn:hover{transform:translateY(-1px)}.btn:focus-visible{outline:3px solid #5eead4;outline-offset:2px}.btn:disabled{opacity:.55;cursor:not-allowed}
+    .btn-primary{background:#0f766e;color:#fff}.btn-soft{background:#e8fffb;color:#115e59;border-color:#b8eee7}.btn-muted{background:#f1f8f7;color:#476b69;border-color:#d8ebea}.btn-danger{background:#fff2f0;color:#b42318;border-color:#ffd2cc}
+    .view{display:none}.view.active{display:block;animation:rise .3s ease both}.auth-view.active{display:flex}.panel{display:none}.panel.active{display:block;animation:rise .25s ease both}
+    .nav-item{width:100%;display:flex;align-items:center;gap:.65rem;border-radius:.8rem;padding:.72rem .85rem;color:#476b69;font-weight:700;text-align:right}.nav-item:hover,.nav-item.active{background:#ccfbf1;color:#115e59}
+    .badge{display:inline-flex;align-items:center;border-radius:999px;padding:.2rem .6rem;font-size:.78rem;font-weight:700}.active-badge{background:#dcfce7;color:#166534}.paused-badge{background:#fef3c7;color:#a16207}.danger-badge{background:#fee2e2;color:#b91c1c}.info-badge{background:#ccfbf1;color:#0f766e}
+    .modal-layer{display:none;position:fixed;inset:0;z-index:50;background:#0b373575;padding:1rem;align-items:center;justify-content:center}.modal-layer.open{display:flex}.modal{width:100%;max-width:44rem;max-height:92%;overflow:auto}
+    .toast{position:fixed;z-index:70;left:1rem;bottom:1rem;max-width:24rem;padding:.9rem 1rem;border-radius:1rem;color:#fff;box-shadow:0 16px 35px #0003;opacity:0;transform:translateY(1rem);transition:.25s;pointer-events:none}.toast.show{opacity:1;transform:none}.toast.success{background:#147b5f}.toast.error{background:#b42318}
+    .tree-node{border-right:2px solid #b8eee7;margin-right:.55rem;padding-right:.85rem}.tree-row{display:flex;align-items:center;gap:.5rem;padding:.5rem;border-radius:.7rem}.tree-row:hover{background:#f0fdfa}.tree-children{margin-top:.15rem}.hidden-tree{display:none}
+    .notice{border-right:4px solid #14b8a6;background:#edfffc}.table-wrap{overflow:auto}.data-table{width:100%;min-width:760px;border-collapse:collapse}.data-table th{background:#f0fdfa;color:#134e4a;text-align:right}.data-table th,.data-table td{padding:.8rem;border-bottom:1px solid #e6f5f3;vertical-align:top}
+    @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}
+    }
+  </style>
+  <script src="/_sdk/fbe2ebfd64647c54.data_sdk.js" type="text/javascript" integrity="sha512-vkTX6CfvpHc3WbjK+tFJCaDuw4ERA4aEV/e5/7+MMJPMTF4RJYCI6CAwJBT/gtDW+dba4uLSsPUgDjVDHWtgUQ=="></script>
+  <script src="/_sdk/fcb6dc01f91829ac.resizing_sdk.js" type="text/javascript" integrity="sha512-YK8JfnN705qaEaVhiL7pcVB2Rs/BbdX5yxV55Az8zT/1JanyEWTw9HqCF915m9iV1YEaoil8qsjJz03l1Kb0Ug=="></script>
+ </head>
+ <body data-template-id="__page-root" style="background: linear-gradient(135deg, rgb(230, 255, 251), rgb(215, 246, 240));">
+  <div class="app-shell">
+   <main class="relative z-10 w-full px-4 py-5 sm:px-6 lg:px-8">
+    <section id="setup-view" class="view auth-view min-h-[80vh] items-center justify-center">
+     <div class="glass-card w-full max-w-lg rounded-3xl p-6 sm:p-9">
+      <div class="mb-7 text-center">
+       <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-700 text-white">
+        <i data-lucide="shield-check"></i>
+       </div>
+       <h1 data-template-id="initial-setup-title" class="canva-text text-2xl font-extrabold" style="color: rgb(19, 78, 74); font-weight: 800; font-style: normal; font-size: 32px;">إعداد حساب المدير</h1>
+       <p data-template-id="initial-setup-text" class="canva-text mt-2" style="color: rgb(71, 85, 105); font-weight: 400; font-style: normal; font-size: 16px;">أنشئ حساب المدير الأول لبدء إعداد الشركات والمستخدمين.</p>
+      </div>
+      <form id="setup-form" class="space-y-4">
+       <div>
+        <label for="setup-username" class="mb-2 block font-bold">اسم المستخدم</label><input id="setup-username" class="field" required="">
+       </div>
+       <div>
+        <label for="setup-display" class="mb-2 block font-bold">الاسم الظاهر</label><input id="setup-display" class="field" required="">
+       </div>
+       <div>
+        <label for="setup-password" class="mb-2 block font-bold">كلمة المرور</label><input id="setup-password" class="field" type="password" minlength="6" required="">
+       </div>
+       <div>
+        <label for="setup-confirm" class="mb-2 block font-bold">تأكيد كلمة المرور</label><input id="setup-confirm" class="field" type="password" minlength="6" required="">
+       </div><button data-template-id="setup-submit" class="canva-button btn btn-primary w-full" type="submit" style="background: rgb(15, 118, 110); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">إنشاء حساب المدير</button>
+      </form>
+     </div>
+    </section>
+    <section id="login-view" class="view auth-view min-h-[80vh] items-center justify-center">
+     <div class="glass-card w-full max-w-lg rounded-3xl p-6 sm:p-9">
+      <div class="mb-7 text-center">
+       <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-700 text-white">
+        <i data-lucide="building-2"></i>
+       </div>
+       <h1 data-template-id="login-title" class="canva-text text-2xl font-extrabold" style="color: rgb(19, 78, 74); font-weight: 800; font-style: normal; font-size: 32px;">مرحبًا بعودتك</h1>
+       <p data-template-id="login-text" class="canva-text mt-2" style="color: rgb(71, 85, 105); font-weight: 400; font-style: normal; font-size: 16px;">سجّل الدخول للوصول إلى بيانات شركتك وصلاحياتك.</p>
+      </div>
+      <form id="login-form" class="space-y-4">
+       <div>
+        <label for="login-username" class="mb-2 block font-bold">اسم المستخدم</label><input id="login-username" class="field" required="">
+       </div>
+       <div>
+        <label for="login-password" class="mb-2 block font-bold">كلمة المرور</label><input id="login-password" class="field" type="password" required="">
+       </div><button data-template-id="login-submit" class="canva-button btn btn-primary w-full" type="submit" style="background: rgb(15, 118, 110); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">تسجيل الدخول</button>
+      </form>
+      <p data-template-id="local-notice" class="canva-banner notice mt-6 rounded-xl p-3 text-sm leading-6" style="background: rgb(237, 255, 252); color: rgb(17, 94, 89); font-weight: 500; font-style: normal; font-size: 16px;">تنبيه: تحفظ البيانات محليًا داخل هذا المتصفح. هذه النسخة مناسبة للإدارة الداخلية والتجربة وليست نظام مصادقة إنتاجيًا.</p>
+     </div>
+    </section>
+    <section id="dashboard-view" class="view">
+     <header data-template-id="dashboard-header" class="canva-header glass-card mx-auto mb-5 max-w-7xl rounded-3xl px-5 py-4" style="background: rgb(255, 255, 255);">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+       <div class="flex items-center gap-3">
+        <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-700 text-white">
+         <i data-lucide="network"></i>
+        </div>
+        <div>
+         <h1 data-template-id="page-title" class="canva-text text-xl font-extrabold" style="color: rgb(19, 78, 74); font-weight: 800; font-style: normal; font-size: 32px;">نظام إدارة الشركات والمهام</h1>
+         <p class="text-sm text-slate-500">إدارة محلية متكاملة للشركات والمهام</p>
+        </div>
+       </div>
+       <div class="flex flex-wrap items-center gap-2">
+        <div id="session-info" class="rounded-xl bg-teal-50 px-3 py-2 text-sm"></div><button data-template-id="change-password-button" id="password-btn" class="canva-button btn btn-soft text-sm" type="button" style="background: rgb(232, 255, 251); color: rgb(17, 94, 89); font-weight: 700; font-style: normal; font-size: 16px;">تغيير كلمة المرور</button><button data-template-id="logout-button" id="logout-btn" class="canva-button btn btn-muted text-sm" type="button" style="background: rgb(241, 248, 247); color: rgb(71, 107, 105); font-weight: 700; font-style: normal; font-size: 16px;">تسجيل الخروج</button>
+       </div>
+      </div>
+     </header>
+     <div class="mx-auto grid max-w-7xl gap-5 lg:grid-cols-[230px_1fr]">
+      <aside class="glass-card h-fit rounded-3xl p-3">
+       <nav aria-label="التنقل الرئيسي" class="space-y-1"><button class="nav-item active" data-panel="dashboard"><i data-lucide="layout-dashboard"></i>لوحة التحكم</button> <button class="nav-item" data-panel="structure"><i data-lucide="git-branch"></i>الشركات والهيكل</button> <button class="nav-item" data-panel="teams"><i data-lucide="users-round"></i>الفرق والأعضاء</button> <button class="nav-item" data-panel="tasks"><i data-lucide="list-checks"></i>المهام</button> <button class="nav-item" data-panel="finance"><i data-lucide="wallet-cards"></i>التقارير المالية</button> <button id="users-nav" class="nav-item" data-panel="users"><i data-lucide="user-cog"></i>المستخدمون</button> <button class="nav-item" data-panel="logs"><i data-lucide="scroll-text"></i>سجل العمليات والتقارير</button>
+       </nav>
+      </aside>
+      <div>
+       <section id="panel-dashboard" class="panel active">
+        <p data-template-id="dashboard-notice" class="canva-banner notice mb-5 rounded-2xl p-4 text-sm" style="background: rgb(237, 255, 252); color: rgb(17, 94, 89); font-weight: 500; font-style: normal; font-size: 16px;">يتم عزل البيانات حسب الشركة: المدير يرى جميع الشركات، بينما المستخدم يرى شركته والفروع والفرق والمهام والتقارير التابعة لها فقط.</p>
+        <div id="stats" class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4"></div>
+        <div id="alerts" class="mt-5"></div>
+       </section>
+       <section id="panel-structure" class="panel">
+        <div class="mb-5 flex flex-wrap items-center justify-between gap-3">
+         <div>
+          <h2 data-template-id="structure-title" class="canva-text text-2xl font-extrabold" style="color: rgb(19, 78, 74); font-weight: 800; font-style: normal; font-size: 24px;">الشركات والهيكل المتشعب</h2>
+          <p class="mt-1 text-slate-600">الشركات والفروع والأنشطة والمشاريع والعملاء وقواعد البيانات.</p>
+         </div>
+         <div class="flex gap-2">
+          <button id="add-company" class="btn btn-primary" type="button"><i data-lucide="building-2"></i>شركة رئيسية</button><button id="add-entity" class="btn btn-soft" type="button"><i data-lucide="plus"></i>كيان أو فرع</button>
+         </div>
+        </div>
+        <div id="structure-tree" class="glass-card rounded-3xl p-4 sm:p-6"></div>
+       </section>
+       <section id="panel-teams" class="panel">
+        <div class="mb-5 flex flex-wrap items-center justify-between gap-3">
+         <div>
+          <h2 data-template-id="teams-title" class="canva-text text-2xl font-extrabold" style="color: rgb(19, 78, 74); font-weight: 800; font-style: normal; font-size: 24px;">الفرق والأعضاء</h2>
+          <p class="mt-1 text-slate-600">أنشئ الفرق واربط الأعضاء ضمن نفس الشركة.</p>
+         </div>
+         <div class="flex gap-2">
+          <button id="add-team" class="btn btn-primary" type="button"><i data-lucide="users"></i>إضافة فريق</button><button id="add-member" class="btn btn-soft" type="button"><i data-lucide="user-plus"></i>إضافة عضو</button>
+         </div>
+        </div>
+        <div id="teams-list" class="grid gap-4 lg:grid-cols-2"></div>
+       </section>
+       <section id="panel-tasks" class="panel">
+        <div class="mb-5 flex flex-wrap items-center justify-between gap-3">
+         <div>
+          <h2 data-template-id="tasks-title" class="canva-text text-2xl font-extrabold" style="color: rgb(19, 78, 74); font-weight: 800; font-style: normal; font-size: 24px;">إدارة المهام</h2>
+          <p class="mt-1 text-slate-600">إدارة المهام ومتابعة الإنجاز والاستحقاقات.</p>
+         </div><button id="add-task" class="btn btn-primary" type="button"><i data-lucide="plus"></i>إضافة مهمة</button>
+        </div>
+        <div class="glass-card mb-5 rounded-2xl p-4">
+         <div class="grid gap-3 md:grid-cols-3 xl:grid-cols-4">
+          <input id="task-search" class="field" placeholder="البحث في المهام"><select id="task-company-filter" class="field"></select><select id="task-team-filter" class="field"></select><select id="task-member-filter" class="field"></select><select id="task-status-filter" class="field"><option value="">كل الحالات</option><option value="new">جديدة</option><option value="progress">قيد التنفيذ</option><option value="completed">مكتملة</option></select><select id="task-priority-filter" class="field"><option value="">كل الأولويات</option><option value="normal">عادية</option><option value="high">عالية</option><option value="urgent">عاجلة</option></select><input id="task-date-filter" class="field" type="date">
+         </div>
+        </div>
+        <div id="tasks-list" class="space-y-3"></div>
+       </section>
+       <section id="panel-finance" class="panel">
+        <div class="mb-5 flex flex-wrap items-center justify-between gap-3">
+         <div>
+          <h2 data-template-id="finance-title" class="canva-text text-2xl font-extrabold" style="color: rgb(19, 78, 74); font-weight: 800; font-style: normal; font-size: 24px;">التقارير المالية</h2>
+          <p class="mt-1 text-slate-600">ملخص الإيرادات والمصروفات وصافي الرصيد.</p>
+         </div><button id="add-finance" class="btn btn-primary" type="button"><i data-lucide="plus"></i>إضافة حركة مالية</button>
+        </div>
+        <div id="finance-summary" class="grid gap-4 sm:grid-cols-3"></div>
+        <div id="finance-details" class="mt-5"></div>
+       </section>
+       <section id="panel-users" class="panel">
+        <div class="mb-5 flex items-center justify-between gap-3">
+         <div>
+          <h2 data-template-id="users-title" class="canva-text text-2xl font-extrabold" style="color: rgb(19, 78, 74); font-weight: 800; font-style: normal; font-size: 24px;">إدارة المستخدمين</h2>
+          <p class="mt-1 text-slate-600">حسابات مستخدمي الشركات وحالتها.</p>
+         </div><button id="add-user" class="btn btn-primary" type="button"><i data-lucide="user-plus"></i>إضافة مستخدم</button>
+        </div>
+        <div id="users-list" class="glass-card table-wrap rounded-3xl"></div>
+       </section>
+       <section id="panel-logs" class="panel">
+        <div class="mb-5 flex flex-wrap items-center justify-between gap-3">
+         <div>
+          <h2 data-template-id="logs-title" class="canva-text text-2xl font-extrabold" style="color: rgb(19, 78, 74); font-weight: 800; font-style: normal; font-size: 24px;">سجل العمليات والتقارير</h2>
+          <p class="mt-1 text-slate-600">سجل العمليات والتقارير اليومية والمهنية والمالية.</p>
+         </div>
+         <div class="flex gap-2">
+          <button id="export-csv" class="btn btn-soft" type="button"><i data-lucide="download"></i>CSV</button><button id="print-report" class="btn btn-primary" type="button"><i data-lucide="printer"></i>طباعة</button>
+         </div>
+        </div>
+        <div class="glass-card mb-5 rounded-2xl p-4">
+         <label for="log-date" class="mb-2 block font-bold">تصفية حسب التاريخ</label><input id="log-date" class="field max-w-xs" type="date">
+        </div>
+        <div id="logs-list" class="glass-card table-wrap rounded-3xl"></div>
+       </section>
+      </div>
+     </div>
+    </section>
+   </main>
+  </div>
+  <div id="modal-layer" class="modal-layer" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+   <div class="modal glass-card rounded-3xl p-5 sm:p-6">
+    <div class="mb-5 flex items-center justify-between">
+     <h2 id="modal-title" class="text-xl font-extrabold"></h2><button id="close-modal" class="btn btn-muted !p-2" type="button" aria-label="إغلاق"><i data-lucide="x"></i></button>
+    </div>
+    <form id="modal-form" class="space-y-4"></form>
+   </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/_sdk/92570d8e491862b9.editing_sdk.js" integrity="sha512-FgTgBgZOGUl1XBrojWdmYvV2Ka+jYLWeeIrMhp1Q1xMV3FJfF+VJFjO6hw+EDGnXYa+zMZXNIP5UYLxGsdfP6g=="></script>
+  <script>
+const Store={
+  key:"company_management_complete_v3",
+  blank:()=>({users:[],companies:[],entities:[],teams:[],members:[],tasks:[],finance:[],logs:[],session:null}),
+  read(){try{return {...this.blank(),...JSON.parse(localStorage.getItem(this.key)||"{}")}}catch{return this.blank()}},
+  write(d){localStorage.setItem(this.key,JSON.stringify(d))},
+  update(fn){const d=this.read();fn(d);this.write(d);return d}
+};
+const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&gt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));
+const clean=v=>String(v||"").trim();
+const uid=p=>p+"_"+Date.now()+"_"+Math.random().toString(36).slice(2,7);
+const now=()=>new Date().toISOString();
+const dateText=v=>v?new Date(v).toLocaleDateString("ar-SA"):"—";
+const money=v=>Number(v||0).toLocaleString("ar-SA",{maximumFractionDigits:2});
+const labels={branch:"فرع",activity:"نشاط",project:"مشروع",client:"عميل",database:"قاعدة بيانات"};
+let currentUser=null;
+
+async function hashPassword(value){
+  const raw="local-company-app:"+value;
+  if(crypto?.subtle){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(raw));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")}
+  return btoa(unescape(encodeURIComponent(raw)));
+}
+function isAdmin(){return currentUser?.role==="admin"}
+function allowCompany(companyId){return isAdmin()||currentUser?.companyId===companyId}
+function adminOnly(){if(!isAdmin()){toast("هذه العملية متاحة للمدير فقط.","error");return false}return true}
+function companyScope(data=Store.read()){return isAdmin()?data.companies.map(x=>x.id):[currentUser?.companyId].filter(Boolean)}
+function accessible(list,data=Store.read()){return list.filter(x=>allowCompany(x.companyId))}
+function logAction(d,action,record,details){
+  d.logs.push({id:uid("log"),action,actor:currentUser?.displayName||"النظام",companyId:record.companyId||"",recordId:record.id||"",details,createdAt:now()})
+}
+function toast(message,type="success"){const t=document.getElementById("toast");t.textContent=message;t.className="toast "+type+" show";clearTimeout(window.tt);window.tt=setTimeout(()=>t.className="toast "+type,3500)}
+function showView(name){document.querySelectorAll(".view").forEach(x=>x.classList.remove("active"));document.getElementById(name+"-view").classList.add("active")}
+function statusBadge(status){return `<span class="badge ${status==="active"?"active-badge":status==="archived"?"danger-badge":"paused-badge"}">${status==="active"?"نشط":status==="archived"?"مؤرشف":"موقوف"}</span>`}
+function nameOf(list,id){return list.find(x=>x.id===id)?.name||"—"}
+function companyName(id,d=Store.read()){return nameOf(d.companies,id)}
+
+function restoreSession(){
+  const d=Store.read();currentUser=d.users.find(u=>u.id===d.session?.userId&&u.status==="active")||null;
+  if(!currentUser&&d.session)Store.update(x=>x.session=null);
+  if(!d.users.some(u=>u.role==="admin"))showView("setup"); else if(currentUser){showView("dashboard");renderAll()}else showView("login");
+}
+function login(u){Store.update(d=>d.session={userId:u.id});currentUser=u;showView("dashboard");renderAll()}
+function logout(){Store.update(d=>d.session=null);currentUser=null;showView("login");document.getElementById("login-form").reset();toast("تم تسجيل الخروج.","success")}
+
+const modal=document.getElementById("modal-layer"),form=document.getElementById("modal-form");
+function openModal(title,content,submit,handler){
+  document.getElementById("modal-title").textContent=title;form.replaceChildren();form.append(content);
+  const actions=document.createElement("div");actions.className="flex gap-3 pt-2";
+  actions.innerHTML=`<button type="button" id="modal-cancel" class="btn btn-muted flex-1">إلغاء</button><button type="submit" class="btn btn-primary flex-1">${esc(submit)}</button>`;
+  form.append(actions);document.getElementById("modal-cancel").onclick=closeModal;
+  form.onsubmit=async e=>{e.preventDefault();await handler(new FormData(form))};modal.classList.add("open");lucide.createIcons()
+}
+function closeModal(){modal.classList.remove("open");form.reset()}
+function field(label,id,type="text",value="",required=false){
+  const w=document.createElement("div"),l=document.createElement("label"),i=document.createElement(type==="textarea"?"textarea":"input");
+  l.htmlFor=id;l.className="mb-2 block font-bold";l.textContent=label;i.id=i.name=id;i.className="field";if(type!=="textarea")i.type=type;i.value=value;if(required)i.required=true;w.append(l,i);return w
+}
+function selectField(label,id,options,value="",required=false){
+  const w=document.createElement("div"),l=document.createElement("label"),s=document.createElement("select");l.htmlFor=id;l.className="mb-2 block font-bold";l.textContent=label;s.id=s.name=id;s.className="field";s.required=required;
+  options.forEach(o=>{const op=new Option(o.label,o.value);op.selected=o.value===value;s.append(op)});w.append(l,s);return w
+}
+function action(label,cls,icon,fn){const b=document.createElement("button");b.type="button";b.className="btn "+cls;b.innerHTML=`<i data-lucide="${icon}"></i><span>${esc(label)}</span>`;b.onclick=fn;return b}
+
+function renderAll(){
+  const d=Store.read();currentUser=d.users.find(x=>x.id===currentUser.id)||null;if(!currentUser)return logout();
+  document.getElementById("session-info").innerHTML=`<strong>${esc(currentUser.displayName)}</strong><br><span>${isAdmin()?"مدير النظام":"مستخدم · "+esc(companyName(currentUser.companyId,d))}</span>`;
+  document.getElementById("users-nav").classList.toggle("hidden",!isAdmin());
+  renderDashboard(d);renderStructure(d);renderTeams(d);renderTaskFilters(d);renderTasks(d);renderFinance(d);renderUsers(d);renderLogs(d);lucide.createIcons()
+}
+function renderDashboard(d){
+  const scope=companyScope(d),tasks=accessible(d.tasks,d).filter(x=>!x.archived),companies=d.companies.filter(x=>scope.includes(x.id)&&!x.archived);
+  const stats=[["building-2","الشركات",companies.length],["users-round","الفرق",accessible(d.teams,d).filter(x=>!x.archived).length],["list-checks","المهام المفتوحة",tasks.filter(x=>x.status!=="completed").length],["wallet","صافي الرصيد",money(accessible(d.finance,d).reduce((s,x)=>s+(x.kind==="income"?+x.amount:-x.amount),0))]];
+  document.getElementById("stats").innerHTML=stats.map(x=>`<article class="glass-card rounded-2xl p-5"><div class="flex items-center gap-3"><div class="rounded-xl bg-teal-50 p-3 text-teal-700"><i data-lucide="${x[0]}"></i></div><div><p class="text-sm text-slate-500">${x[1]}</p><strong class="text-2xl">${x[2]}</strong></div></div></article>`).join("");
+  const today=new Date().toISOString().slice(0,10),late=tasks.filter(x=>x.status!=="completed"&&x.dueDate&&x.dueDate<today),due=tasks.filter(x=>x.status!=="completed"&&x.dueDate===today);
+  document.getElementById("alerts").innerHTML=(late.length||due.length)?`<div class="glass-card rounded-2xl p-5"><h2 class="mb-3 text-lg font-extrabold">تنبيهات المهام</h2>${late.map(x=>`<p class="mb-2 rounded-xl bg-red-50 p-3 text-red-800">متأخرة: ${esc(x.title)} — ${dateText(x.dueDate)}</p>`).join("")}${due.map(x=>`<p class="mb-2 rounded-xl bg-amber-50 p-3 text-amber-800">مستحقة اليوم: ${esc(x.title)}</p>`).join("")}</div>`:`<div class="rounded-2xl bg-teal-50 p-4 text-teal-900">لا توجد مهام متأخرة أو مستحقة اليوم.</div>`;
+}
+function renderStructure(d){
+  const roots=d.companies.filter(c=>allowCompany(c.id));
+  function entityNode(parentId,companyId){
+    return d.entities.filter(e=>e.parentId===parentId&&e.companyId===companyId&&!e.archived).map(e=>`<div class="tree-node"><div class="tree-row"><button class="toggle-tree btn btn-muted !p-1" type="button"><i data-lucide="chevron-down"></i></button><i data-lucide="${e.type==="branch"?"git-branch":"folder"}" class="text-teal-700"></i><strong>${esc(e.name)}</strong><span class="text-sm text-slate-500">${labels[e.type]}</span><span class="mr-auto">${statusBadge(e.status)}</span><button class="edit-entity btn btn-soft !p-2" data-id="${e.id}" type="button"><i data-lucide="square-pen"></i></button><button class="archive-entity btn btn-danger !p-2" data-id="${e.id}" type="button"><i data-lucide="archive"></i></button></div><div class="tree-children">${entityNode(e.id,companyId)}</div></div>`).join("")
+  }
+  document.getElementById("structure-tree").innerHTML=roots.length?roots.map(c=>`<div class="mb-4 rounded-2xl border border-teal-100 p-3"><div class="tree-row bg-teal-50"><button class="toggle-tree btn btn-muted !p-1" type="button"><i data-lucide="chevron-down"></i></button><i data-lucide="building-2" class="text-teal-700"></i><strong>${esc(c.name)}</strong><span class="mr-auto">${statusBadge(c.status)}</span>${isAdmin()?`<button class="edit-company btn btn-soft !p-2" data-id="${c.id}" type="button"><i data-lucide="square-pen"></i></button><button class="archive-company btn btn-danger !p-2" data-id="${c.id}" type="button"><i data-lucide="archive"></i></button>`:""}</div><div class="tree-children">${entityNode(c.id,c.id)||'<p class="p-3 text-sm text-slate-500">لا توجد فروع أو كيانات بعد.</p>'}</div></div>`).join(""):`<p class="text-center text-slate-500">لا توجد شركات ضمن نطاقك.</p>`;
+  document.querySelectorAll(".toggle-tree").forEach(b=>b.onclick=()=>b.closest(".tree-node,div").querySelector(".tree-children")?.classList.toggle("hidden-tree"));
+  document.querySelectorAll(".edit-company").forEach(b=>b.onclick=()=>openCompanyForm(d.companies.find(x=>x.id===b.dataset.id)));
+  document.querySelectorAll(".archive-company").forEach(b=>b.onclick=()=>confirmArchive("شركة",d.companies.find(x=>x.id===b.dataset.id),"companies"));
+  document.querySelectorAll(".edit-entity").forEach(b=>b.onclick=()=>openEntityForm(d.entities.find(x=>x.id===b.dataset.id)));
+  document.querySelectorAll(".archive-entity").forEach(b=>b.onclick=()=>confirmArchive("كيان",d.entities.find(x=>x.id===b.dataset.id),"entities"));
+}
+function renderTeams(d){
+  const teams=accessible(d.teams,d).filter(x=>!x.archived);
+  document.getElementById("teams-list").innerHTML=teams.length?teams.map(t=>{const members=d.members.filter(m=>m.companyId===t.companyId&&m.teamIds.includes(t.id)&&!m.archived);return `<article class="glass-card rounded-3xl p-5"><div class="flex justify-between gap-2"><div><h3 class="text-lg font-extrabold">${esc(t.name)}</h3><p class="mt-1 text-sm text-slate-500">${esc(t.description||"لا يوجد وصف")} · ${esc(companyName(t.companyId,d))}</p></div>${statusBadge(t.status)}</div><div class="mt-4 rounded-xl bg-teal-50 p-3"><strong>الأعضاء (${members.length})</strong><div class="mt-2 space-y-1">${members.length?members.map(m=>`<p>${esc(m.name)} <span class="text-sm text-slate-500">— ${esc(m.role||"عضو")}</span></p>`).join(""):"<p class='text-sm text-slate-500'>لا يوجد أعضاء مرتبطون.</p>"}</div></div><div class="mt-4 flex gap-2"><button class="edit-team btn btn-soft text-sm" data-id="${t.id}" type="button">تعديل</button><button class="archive-team btn btn-danger text-sm" data-id="${t.id}" type="button">أرشفة</button></div></article>`}).join(""):`<div class="rounded-2xl border border-dashed border-teal-200 bg-white/60 p-8 text-center text-slate-500">لا توجد فرق ضمن نطاقك.</div>`;
+  document.querySelectorAll(".edit-team").forEach(b=>b.onclick=()=>openTeamForm(d.teams.find(x=>x.id===b.dataset.id)));
+  document.querySelectorAll(".archive-team").forEach(b=>b.onclick=()=>confirmArchive("فريق",d.teams.find(x=>x.id===b.dataset.id),"teams"));
+}
+function fillSelect(id,items,placeholder){const s=document.getElementById(id),v=s.value;s.innerHTML=`<option value="">${placeholder}</option>`+items.map(x=>`<option value="${esc(x.id)}">${esc(x.name)}</option>`).join("");s.value=v}
+function renderTaskFilters(d){fillSelect("task-company-filter",d.companies.filter(x=>allowCompany(x.id)&&!x.archived),"كل الشركات");fillSelect("task-team-filter",accessible(d.teams,d).filter(x=>!x.archived),"كل الفرق");fillSelect("task-member-filter",accessible(d.members,d).filter(x=>!x.archived),"كل الأعضاء")}
+function renderTasks(d){
+  const q=clean(document.getElementById("task-search").value).toLowerCase(),co=document.getElementById("task-company-filter").value,te=document.getElementById("task-team-filter").value,me=document.getElementById("task-member-filter").value,st=document.getElementById("task-status-filter").value,pr=document.getElementById("task-priority-filter").value,dt=document.getElementById("task-date-filter").value;
+  const status={new:"جديدة",progress:"قيد التنفيذ",completed:"مكتملة"},priority={normal:"عادية",high:"عالية",urgent:"عاجلة"};
+  const rows=accessible(d.tasks,d).filter(x=>!x.archived&&(!q||x.title.toLowerCase().includes(q)||x.description.toLowerCase().includes(q))&&(!co||x.companyId===co)&&(!te||x.teamId===te)&&(!me||x.memberId===me)&&(!st||x.status===st)&&(!pr||x.priority===pr)&&(!dt||x.dueDate===dt));
+  document.getElementById("tasks-list").innerHTML=rows.length?rows.map(t=>`<article class="glass-card rounded-2xl p-4"><div class="flex flex-col justify-between gap-3 sm:flex-row"><div><div class="flex flex-wrap items-center gap-2"><h3 class="font-extrabold">${esc(t.title)}</h3><span class="badge info-badge">${status[t.status]}</span><span class="badge ${t.priority==="urgent"?"danger-badge":"paused-badge"}">${priority[t.priority]}</span></div><p class="mt-2 text-sm text-slate-600">${esc(t.description||"لا يوجد وصف")}</p><p class="mt-2 text-sm text-slate-500">الفريق: ${esc(nameOf(d.teams,t.teamId))} · العضو: ${esc(nameOf(d.members,t.memberId))} · الموعد: ${dateText(t.dueDate)} · الإنجاز: ${t.progress||0}%</p></div><div class="flex flex-wrap gap-2"><button class="edit-task btn btn-soft text-sm" data-id="${t.id}" type="button">تعديل</button><button class="task-state btn btn-muted text-sm" data-id="${t.id}" type="button">${t.status==="completed"?"إعادة فتح":"إكمال"}</button><button class="archive-task btn btn-danger text-sm" data-id="${t.id}" type="button">أرشفة</button></div></div></article>`).join(""):`<div class="rounded-2xl border border-dashed border-teal-200 bg-white/60 p-8 text-center text-slate-500">لا توجد مهام مطابقة.</div>`;
+  document.querySelectorAll(".edit-task").forEach(b=>b.onclick=()=>openTaskForm(d.tasks.find(x=>x.id===b.dataset.id)));
+  document.querySelectorAll(".archive-task").forEach(b=>b.onclick=()=>confirmArchive("مهمة",d.tasks.find(x=>x.id===b.dataset.id),"tasks"));
+  document.querySelectorAll(".task-state").forEach(b=>b.onclick=()=>toggleTaskState(b.dataset.id));
+}
+function renderFinance(d){
+  const rows=accessible(d.finance,d),income=rows.filter(x=>x.kind==="income").reduce((s,x)=>s+Number(x.amount),0),expense=rows.filter(x=>x.kind==="expense").reduce((s,x)=>s+Number(x.amount),0);
+  document.getElementById("finance-summary").innerHTML=[["إجمالي الإيرادات",income,"bg-emerald-50 text-emerald-800"],["إجمالي المصروفات",expense,"bg-red-50 text-red-800"],["صافي الرصيد",income-expense,"bg-teal-50 text-teal-900"]].map(x=>`<div class="${x[2]} rounded-2xl p-5"><p>${x[0]}</p><strong class="mt-2 block text-2xl">${money(x[1])}</strong></div>`).join("");
+  document.getElementById("finance-details").innerHTML=`<div class="glass-card table-wrap rounded-3xl"><table class="data-table"><thead><tr><th>البيان</th><th>النوع</th><th>المبلغ</th><th>الشركة</th><th>الفريق</th><th>العضو</th><th>التاريخ</th></tr></thead><tbody>${rows.length?rows.map(x=>`<tr><td>${esc(x.statement)}</td><td>${x.kind==="income"?"إيراد":"مصروف"}</td><td>${money(x.amount)}</td><td>${esc(companyName(x.companyId,d))}</td><td>${esc(nameOf(d.teams,x.teamId))}</td><td>${esc(nameOf(d.members,x.memberId))}</td><td>${dateText(x.date)}</td></tr>`).join(""):`<tr><td colspan="7" class="text-center text-slate-500">لا توجد حركات مالية.</td></tr>`}</tbody></table></div>`;
+}
+function renderUsers(d){
+  if(!isAdmin()){document.getElementById("users-list").innerHTML="";return}
+  document.getElementById("users-list").innerHTML=`<table class="data-table"><thead><tr><th>المستخدم</th><th>الشركة</th><th>الدور</th><th>الحالة</th><th>إجراءات</th></tr></thead><tbody>${d.users.map(u=>`<tr><td><strong>${esc(u.displayName)}</strong><br><span class="text-sm text-slate-500">@${esc(u.username)}</span></td><td>${esc(u.role==="admin"?"جميع الشركات":companyName(u.companyId,d))}</td><td>${u.role==="admin"?"مدير":"مستخدم"}</td><td>${statusBadge(u.status)}</td><td><div class="flex gap-2"><button class="edit-user btn btn-soft text-sm" data-id="${u.id}" type="button">تعديل</button>${u.id!==currentUser.id?`<button class="toggle-user btn btn-muted text-sm" data-id="${u.id}" type="button">${u.status==="active"?"إيقاف":"تفعيل"}</button>`:""}</div></td></tr>`).join("")}</tbody></table>`;
+  document.querySelectorAll(".edit-user").forEach(b=>b.onclick=()=>openUserForm(d.users.find(x=>x.id===b.dataset.id)));
+  document.querySelectorAll(".toggle-user").forEach(b=>b.onclick=()=>toggleUser(b.dataset.id));
+}
+function renderLogs(d){
+  const filter=document.getElementById("log-date").value,rows=accessible(d.logs,d).filter(x=>!filter||x.createdAt.slice(0,10)===filter).slice().reverse();
+  document.getElementById("logs-list").innerHTML=`<table class="data-table"><thead><tr><th>العملية</th><th>المنفذ</th><th>الشركة</th><th>التفاصيل</th><th>التاريخ</th></tr></thead><tbody>${rows.length?rows.map(x=>`<tr><td>${esc(x.action)}</td><td>${esc(x.actor)}</td><td>${esc(companyName(x.companyId,d))}</td><td>${esc(x.details)}</td><td>${new Date(x.createdAt).toLocaleString("ar-SA")}</td></tr>`).join(""):`<tr><td colspan="5" class="text-center text-slate-500">لا توجد عمليات ضمن النطاق الحالي.</td></tr>`}</tbody></table>`;
+}
+
+function openCompanyForm(item=null){
+  if(!adminOnly())return;const box=document.createElement("div");box.className="space-y-4";box.append(field("اسم الشركة","name","text",item?.name||"",true),field("الوصف","description","textarea",item?.description||""),selectField("الحالة","status",[{value:"active",label:"نشطة"},{value:"archived",label:"مؤرشفة"}],item?.status||"active"));
+  openModal(item?"تعديل الشركة":"إضافة شركة رئيسية",box,"حفظ",fd=>{const name=clean(fd.get("name"));if(!name)return;Store.update(d=>{if(item){const x=d.companies.find(x=>x.id===item.id);Object.assign(x,{name,description:clean(fd.get("description")),status:fd.get("status"),updatedAt:now()});logAction(d,"تعديل شركة",x,name)}else{const x={id:uid("company"),type:"company",name,parentId:"",companyId:"",status:fd.get("status"),description:clean(fd.get("description")),owner:"",client:"",dueDate:"",budget:0,income:0,expenses:0,createdBy:currentUser.id,createdAt:now(),updatedAt:now(),archived:false};x.companyId=x.id;d.companies.push(x);logAction(d,"إضافة شركة",x,name)}});closeModal();renderAll();toast("تم حفظ الشركة بنجاح.")})
+}
+function openEntityForm(item=null){
+  const d=Store.read(),box=document.createElement("div");box.className="space-y-4",scope=d.companies.filter(x=>allowCompany(x.id)&&!x.archived);
+  box.append(selectField("نوع الكيان","type",Object.entries(labels).map(([value,label])=>({value,label})),item?.type||"branch",true),field("الاسم","name","text",item?.name||"",true));
+  if(isAdmin())box.append(selectField("الشركة","companyId",[{value:"",label:"اختر الشركة"},...scope.map(x=>({value:x.id,label:x.name}))],item?.companyId||"",true));
+  box.append(selectField("الكيان الأب / الفرع الأب","parentId",[{value:item?.companyId||currentUser?.companyId||"",label:"الشركة الرئيسية"},...accessible(d.entities,d).filter(x=>x.type==="branch"&&!x.archived).map(x=>({value:x.id,label:x.name}))],item?.parentId||item?.companyId||currentUser?.companyId||""),field("الوصف","description","textarea",item?.description||""),field("المالك","owner","text",item?.owner||""),field("العميل","client","text",item?.client||""),field("تاريخ الاستحقاق","dueDate","date",item?.dueDate||""),field("الميزانية","budget","number",item?.budget||0));
+  openModal(item?"تعديل كيان":"إضافة كيان أو فرع",box,"حفظ",fd=>{const companyId=item?.companyId||(isAdmin()?fd.get("companyId"):currentUser.companyId);if(!allowCompany(companyId))return toast("لا تملك صلاحية هذه الشركة.","error");Store.update(d=>{if(item){const x=d.entities.find(x=>x.id===item.id);if(!allowCompany(x.companyId))return;Object.assign(x,{type:fd.get("type"),name:clean(fd.get("name")),parentId:fd.get("parentId"),description:clean(fd.get("description")),owner:clean(fd.get("owner")),client:clean(fd.get("client")),dueDate:fd.get("dueDate"),budget:+fd.get("budget")||0,updatedAt:now()});logAction(d,"تعديل كيان",x,x.name)}else{const x={id:uid("entity"),type:fd.get("type"),name:clean(fd.get("name")),parentId:fd.get("parentId"),companyId,status:"active",description:clean(fd.get("description")),owner:clean(fd.get("owner")),client:clean(fd.get("client")),dueDate:fd.get("dueDate"),budget:+fd.get("budget")||0,income:0,expenses:0,createdBy:currentUser.id,createdAt:now(),updatedAt:now(),archived:false};d.entities.push(x);logAction(d,"إضافة كيان",x,x.name)}});closeModal();renderAll();toast("تم حفظ الكيان.")})
+}
+function openTeamForm(item=null){
+  const d=Store.read(),companies=d.companies.filter(x=>allowCompany(x.id)&&!x.archived),box=document.createElement("div");box.className="space-y-4";box.append(field("اسم الفريق","name","text",item?.name||"",true));if(isAdmin())box.append(selectField("الشركة","companyId",companies.map(x=>({value:x.id,label:x.name})),item?.companyId||"",true));box.append(selectField("الفرع التابع","branchId",[{value:"",label:"الشركة الرئيسية"},...accessible(d.entities,d).filter(x=>x.type==="branch"&&!x.archived).map(x=>({value:x.id,label:x.name}))],item?.branchId||""),field("الوصف","description","textarea",item?.description||""));
+  openModal(item?"تعديل الفريق":"إضافة فريق",box,"حفظ",fd=>{const companyId=item?.companyId||(isAdmin()?fd.get("companyId"):currentUser.companyId);if(!allowCompany(companyId))return toast("لا تملك صلاحية الشركة.","error");Store.update(d=>{if(item){const x=d.teams.find(x=>x.id===item.id);Object.assign(x,{name:clean(fd.get("name")),branchId:fd.get("branchId"),description:clean(fd.get("description")),updatedAt:now()});logAction(d,"تعديل فريق",x,x.name)}else{const x={id:uid("team"),type:"team",name:clean(fd.get("name")),companyId,branchId:fd.get("branchId"),status:"active",description:clean(fd.get("description")),createdBy:currentUser.id,createdAt:now(),updatedAt:now(),archived:false};d.teams.push(x);logAction(d,"إضافة فريق",x,x.name)}});closeModal();renderAll();toast("تم حفظ الفريق.")})
+}
+function openMemberForm(item=null){
+  const d=Store.read(),teams=accessible(d.teams,d).filter(x=>!x.archived),box=document.createElement("div");box.className="space-y-4";box.append(field("اسم العضو","name","text",item?.name||"",true),field("بيانات التواصل","contact","text",item?.contact||""),field("الدور","role","text",item?.role||""),selectField("الفرق التابعة","teamIds",teams.map(x=>({value:x.id,label:x.name})),item?.teamIds?.[0]||"",true),selectField("الحالة","status",[{value:"active",label:"فعال"},{value:"paused",label:"موقوف"}],item?.status||"active"));
+  openModal(item?"تعديل عضو":"إضافة عضو",box,"حفظ",fd=>{const team=d.teams.find(x=>x.id===fd.get("teamIds"));if(!team||!allowCompany(team.companyId))return toast("اختر فريقًا ضمن نطاق شركتك.","error");Store.update(d=>{if(item){const x=d.members.find(x=>x.id===item.id);Object.assign(x,{name:clean(fd.get("name")),contact:clean(fd.get("contact")),role:clean(fd.get("role")),teamIds:[team.id],status:fd.get("status"),updatedAt:now()});logAction(d,"تعديل عضو",x,x.name)}else{const x={id:uid("member"),memberId:uid("memberref"),name:clean(fd.get("name")),contact:clean(fd.get("contact")),role:clean(fd.get("role")),teamIds:[team.id],companyId:team.companyId,status:fd.get("status"),createdBy:currentUser.id,createdAt:now(),updatedAt:now(),archived:false};d.members.push(x);logAction(d,"إضافة عضو",x,x.name)}});closeModal();renderAll();toast("تم حفظ العضو.")})
+}
+function openTaskForm(item=null){
+  const d=Store.read(),teams=accessible(d.teams,d).filter(x=>!x.archived),members=accessible(d.members,d).filter(x=>!x.archived),box=document.createElement("div");box.className="space-y-4";box.append(field("عنوان المهمة","title","text",item?.title||"",true),field("الوصف","description","textarea",item?.description||""));
+  if(isAdmin())box.append(selectField("الشركة","companyId",d.companies.filter(x=>!x.archived).map(x=>({value:x.id,label:x.name})),item?.companyId||"",true));
+  box.append(selectField("الفريق","teamId",teams.map(x=>({value:x.id,label:x.name})),item?.teamId||"",true),selectField("العضو المسند إليه","memberId",members.map(x=>({value:x.id,label:x.name})),item?.memberId||"",true),field("تاريخ التسليم","dueDate","date",item?.dueDate||""),field("الشروط","conditions","textarea",item?.conditions||""),selectField("الحالة","status",[{value:"new",label:"جديدة"},{value:"progress",label:"قيد التنفيذ"},{value:"completed",label:"مكتملة"}],item?.status||"new"),selectField("الأولوية","priority",[{value:"normal",label:"عادية"},{value:"high",label:"عالية"},{value:"urgent",label:"عاجلة"}],item?.priority||"normal"),field("نسبة الإنجاز","progress","number",item?.progress||0),selectField("معتمدة","approved",[{value:"false",label:"غير معتمدة"},{value:"true",label:"معتمدة"}],String(item?.approved||false)),field("تذكير","reminder","date",item?.reminder||""));
+  openModal(item?"تعديل المهمة":"إضافة مهمة",box,"حفظ",fd=>{const team=d.teams.find(x=>x.id===fd.get("teamId")),member=d.members.find(x=>x.id===fd.get("memberId")),companyId=item?.companyId||(isAdmin()?fd.get("companyId"):currentUser.companyId);if(!team||!member||team.companyId!==companyId||member.companyId!==companyId||!member.teamIds.includes(team.id)||!allowCompany(companyId))return toast("يجب أن ينتمي الفريق والعضو إلى الشركة نفسها.","error");Store.update(d=>{const base={title:clean(fd.get("title")),description:clean(fd.get("description")),teamId:team.id,memberId:member.id,dueDate:fd.get("dueDate"),conditions:clean(fd.get("conditions")),status:fd.get("status"),priority:fd.get("priority"),approved:fd.get("approved")==="true",reminder:fd.get("reminder"),progress:Math.min(100,Math.max(0,+fd.get("progress")||0)),updatedAt:now()};if(item){const x=d.tasks.find(x=>x.id===item.id);Object.assign(x,base,{completedAt:base.status==="completed"?(x.completedAt||now()):""});logAction(d,"تعديل مهمة",x,x.title)}else{const x={id:uid("task"),companyId,branchId:"",activityId:"",projectId:"",createdBy:currentUser.id,createdAt:now(),archived:false,completedAt:base.status==="completed"?now():"",...base};d.tasks.push(x);logAction(d,"إضافة مهمة",x,x.title)}});closeModal();renderAll();toast("تم حفظ المهمة.")})
+}
+function openFinanceForm(){
+  const d=Store.read(),teams=accessible(d.teams,d).filter(x=>!x.archived),members=accessible(d.members,d).filter(x=>!x.archived),box=document.createElement("div");box.className="space-y-4";box.append(selectField("نوع الحركة","kind",[{value:"income",label:"إيراد / دائن"},{value:"expense",label:"مصروف / مدين"}],"income"),field("البيان","statement","text","",true),field("المبلغ","amount","number","",true));if(isAdmin())box.append(selectField("الشركة","companyId",d.companies.filter(x=>!x.archived).map(x=>({value:x.id,label:x.name})),"",true));box.append(selectField("الفريق","teamId",teams.map(x=>({value:x.id,label:x.name})),"",true),selectField("العضو","memberId",members.map(x=>({value:x.id,label:x.name})),"",true),field("التاريخ","date","date",new Date().toISOString().slice(0,10),true));
+  openModal("إضافة حركة مالية",box,"حفظ الحركة",fd=>{const team=d.teams.find(x=>x.id===fd.get("teamId")),member=d.members.find(x=>x.id===fd.get("memberId")),companyId=isAdmin()?fd.get("companyId"):currentUser.companyId;if(!team||!member||team.companyId!==companyId||member.companyId!==companyId||!member.teamIds.includes(team.id)||!allowCompany(companyId))return toast("بيانات الشركة والفريق والعضو غير متطابقة.","error");Store.update(d=>{const x={id:uid("finance"),kind:fd.get("kind"),statement:clean(fd.get("statement")),amount:+fd.get("amount")||0,date:fd.get("date"),companyId,teamId:team.id,memberId:member.id,createdBy:currentUser.id,createdAt:now()};d.finance.push(x);logAction(d,"إضافة حركة مالية",x,x.statement)});closeModal();renderAll();toast("تم حفظ الحركة المالية.")})
+}
+function openUserForm(item=null){
+  if(!adminOnly())return;const d=Store.read(),box=document.createElement("div");box.className="space-y-4";box.append(field("اسم المستخدم","username","text",item?.username||"",true),field("الاسم الظاهر","displayName","text",item?.displayName||"",true));if(!item)box.append(field("كلمة المرور","password","password","",true));box.append(selectField("الشركة","companyId",d.companies.filter(x=>!x.archived).map(x=>({value:x.id,label:x.name})),item?.companyId||"",true),selectField("الحالة","status",[{value:"active",label:"فعال"},{value:"paused",label:"موقوف"}],item?.status||"active"));
+  openModal(item?"تعديل المستخدم":"إضافة مستخدم للشركة",box,"حفظ",async fd=>{const username=clean(fd.get("username")).toLowerCase();if(d.users.some(x=>x.username===username&&x.id!==item?.id))return toast("اسم المستخدم مستخدم بالفعل.","error");if(!fd.get("companyId"))return toast("اختر الشركة.","error");if(item){Store.update(d=>{const x=d.users.find(x=>x.id===item.id);Object.assign(x,{username,displayName:clean(fd.get("displayName")),companyId:fd.get("companyId"),status:fd.get("status"),updatedAt:now()});logAction(d,"تعديل مستخدم",x,x.displayName)})}else{const p=fd.get("password");if(String(p).length<6)return toast("كلمة المرور يجب أن تكون 6 أحرف على الأقل.","error");const passwordHash=await hashPassword(p);Store.update(d=>{const x={id:uid("user"),username,displayName:clean(fd.get("displayName")),role:"user",companyId:fd.get("companyId"),status:fd.get("status"),passwordHash,createdAt:now()};d.users.push(x);logAction(d,"إضافة مستخدم",x,x.displayName)})}closeModal();renderAll();toast("تم حفظ المستخدم.")})
+}
+function openPasswordForm(){
+  const box=document.createElement("div");box.className="space-y-4";box.append(field("كلمة المرور الجديدة","password","password","",true),field("تأكيد كلمة المرور","confirm","password","",true));
+  openModal("تغيير كلمة المرور",box,"حفظ",async fd=>{if(fd.get("password")!==fd.get("confirm"))return toast("كلمتا المرور غير متطابقتين.","error");if(String(fd.get("password")).length<6)return toast("كلمة المرور قصيرة.","error");const hash=await hashPassword(fd.get("password"));Store.update(d=>{const x=d.users.find(x=>x.id===currentUser.id);x.passwordHash=hash;logAction(d,"تغيير كلمة مرور",x,x.displayName)});closeModal();toast("تم تغيير كلمة المرور.")})
+}
+function confirmArchive(label,item,list){
+  if(!item||!allowCompany(item.companyId||item.id))return toast("لا تملك صلاحية السجل.","error");
+  const box=document.createElement("div");box.innerHTML=`<p class="rounded-xl bg-amber-50 p-4 text-amber-900">هل تريد أرشفة ${esc(label)} «${esc(item.name)}»؟ يمكن الاحتفاظ بالسجل ضمن البيانات المؤرشفة.</p>`;
+  openModal("تأكيد الأرشفة",box,"نعم، أرشف",()=>{Store.update(d=>{const x=d[list].find(x=>x.id===item.id);if(!x||!allowCompany(x.companyId||x.id))return;x.archived=true;x.status="archived";x.updatedAt=now();logAction(d,"أرشفة "+label,x,x.name)});closeModal();renderAll();toast("تمت الأرشفة.")})
+}
+function toggleTaskState(id){Store.update(d=>{const x=d.tasks.find(x=>x.id===id);if(!x||!allowCompany(x.companyId))return;x.status=x.status==="completed"?"progress":"completed";x.completedAt=x.status==="completed"?now():"";x.updatedAt=now();logAction(d,x.status==="completed"?"إكمال مهمة":"إعادة فتح مهمة",x,x.title)});renderAll();toast("تم تحديث حالة المهمة.")}
+function toggleUser(id){if(!adminOnly())return;Store.update(d=>{const x=d.users.find(x=>x.id===id);x.status=x.status==="active"?"paused":"active";logAction(d,"تحديث حالة مستخدم",x,x.displayName)});renderAll();toast("تم تحديث حالة المستخدم.")}
+
+document.getElementById("setup-form").onsubmit=async e=>{e.preventDefault();const username=clean(setup-username.value).toLowerCase(),displayName=clean(setup-display.value),p=setup-password.value;if(p!==setup-confirm.value)return toast("كلمتا المرور غير متطابقتين.","error");if(p.length<6)return toast("كلمة المرور قصيرة.","error");if(Store.read().users.some(x=>x.role==="admin"))return restoreSession();const passwordHash=await hashPassword(p),u={id:uid("user"),username,displayName,role:"admin",companyId:"",status:"active",passwordHash,createdAt:now()};Store.update(d=>d.users.push(u));login(u);toast("تم إنشاء حساب المدير.")};
+document.getElementById("login-form").onsubmit=async e=>{e.preventDefault();const u=Store.read().users.find(x=>x.username===clean(login-username.value).toLowerCase());if(!u||u.passwordHash!==await hashPassword(login-password.value))return toast("اسم المستخدم أو كلمة المرور غير صحيحة.","error");if(u.status!=="active")return toast("الحساب موقوف.","error");login(u);toast("مرحبًا بك، "+u.displayName)};
+document.querySelectorAll(".nav-item[data-panel]").forEach(b=>b.onclick=()=>{if(b.dataset.panel==="users"&&!isAdmin())return;document.querySelectorAll(".nav-item").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));document.getElementById("panel-"+b.dataset.panel).classList.add("active")});
+document.getElementById("logout-btn").onclick=logout;document.getElementById("password-btn").onclick=openPasswordForm;document.getElementById("add-company").onclick=()=>openCompanyForm();document.getElementById("add-entity").onclick=()=>openEntityForm();document.getElementById("add-team").onclick=()=>openTeamForm();document.getElementById("add-member").onclick=()=>openMemberForm();document.getElementById("add-task").onclick=()=>openTaskForm();document.getElementById("add-finance").onclick=openFinanceForm;document.getElementById("add-user").onclick=()=>openUserForm();document.getElementById("close-modal").onclick=closeModal;modal.onclick=e=>{if(e.target===modal)closeModal()};
+["task-search","task-company-filter","task-team-filter","task-member-filter","task-status-filter","task-priority-filter","task-date-filter"].forEach(id=>document.getElementById(id).addEventListener(id==="task-search"?"input":"change",()=>renderTasks(Store.read())));
+document.getElementById("log-date").onchange=()=>renderLogs(Store.read());
+document.getElementById("export-csv").onclick=()=>{const d=Store.read(),rows=accessible(d.logs,d),csv=["العملية,المنفذ,الشركة,التفاصيل,التاريخ",...rows.map(x=>[x.action,x.actor,companyName(x.companyId,d),x.details,x.createdAt].map(v=>`"${String(v).replace(/"/g,'""')}"`).join(","))].join("\n"),a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\ufeff"+csv],{type:"text/csv;charset=utf-8"}));a.download="تقرير-العمليات.csv";a.click();URL.revokeObjectURL(a.href)};
+document.getElementById("print-report").onclick=()=>window.print();
+document.addEventListener("DOMContentLoaded",()=>{lucide.createIcons();restoreSession()});
+</script>
+ 
+</body></html>
